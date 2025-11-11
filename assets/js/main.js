@@ -334,6 +334,7 @@
 })(jQuery)
 
 
+// smooth scroll to hash on page load
 window.addEventListener("load", function () {
   const hash = window.location.hash;
   if (hash) {
@@ -345,3 +346,41 @@ window.addEventListener("load", function () {
     }, 800);
   }
 });
+
+
+// counter animation
+document.addEventListener('DOMContentLoaded', function(){
+		var counters = document.querySelectorAll('.count');
+		if (!counters.length) return;
+
+		function animateCount(el, target, duration){
+			duration = duration || 1600;
+			var start = performance.now();
+			var initial = 0;
+			function frame(now){
+				var elapsed = now - start;
+				var progress = Math.min(elapsed / duration, 1);
+				// easeOutCubic
+				var eased = 1 - Math.pow(1 - progress, 3);
+				var value = Math.floor(initial + (target - initial) * eased);
+				el.textContent = value.toLocaleString();
+				if (progress < 1) requestAnimationFrame(frame);
+				else el.textContent = target.toLocaleString();
+			}
+			requestAnimationFrame(frame);
+		}
+
+		var io = new IntersectionObserver(function(entries, obs){
+			entries.forEach(function(entry){
+				if (entry.isIntersecting){
+					var el = entry.target;
+					var target = parseInt(el.getAttribute('data-target')) || 0;
+					var dur = parseInt(el.getAttribute('data-duration')) || 1600;
+					animateCount(el, target, dur);
+					obs.unobserve(el);
+				}
+			});
+		},{threshold:0.6});
+
+		counters.forEach(function(c){ io.observe(c); });
+	});
