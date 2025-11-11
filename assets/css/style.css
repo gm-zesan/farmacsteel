@@ -226,6 +226,14 @@ h6, .h6{
     	opacity: 0;
   	}
 }
+
+/* Preloader image styles */
+#preloader { position: fixed; inset: 0; background: #0b0b0b; display:flex; align-items:center; justify-content:center; z-index:99999; }
+#preloader .preloader_img{ max-width:220px; width:22vw; height:auto; display:block }
+#preloader .loader3{ display:none; }
+@media (max-width:480px){ #preloader .preloader_img{ max-width:120px; width:30vw } }
+
+
 /*Hamburger-menu START CSS*/
 header {
 	position: fixed;
