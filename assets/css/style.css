@@ -1035,12 +1035,20 @@ header.open-menu .header_menu ul + .button{
 	font-size: 3.5rem;
 	color: var(--yellow);
 }
-/* .timeline_content ul li strong{
-	font-size: 3.5rem;
-	color: #fff;
-	background-color: var(--yellow);
-	padding: 0 1rem;
-} */
+
+
+.timeline_content .num_focus h3{
+	color: var(--yellow);
+	margin-bottom: 0;
+}
+.timeline_content .num_focus h3 span{
+	color: var(--yellow);
+	margin-bottom: 0;
+	font-size: 5rem;
+}
+.timeline_content .num_focus P{
+	margin-bottom: 3rem;
+}
 
 .timeline_content p {
 	text-wrap: balance;
