@@ -1079,7 +1079,7 @@ header.open-menu .header_menu ul + .button{
 }
 
 .equipment-section {
-	padding: 8rem 0;
+	padding: 12rem 0;
 	color: var(--text-light);
 }
 
@@ -1104,13 +1104,13 @@ header.open-menu .header_menu ul + .button{
 }
 
 .equipment-section .image_number .image img{
-	height: 40rem;
+	height: 50rem;
 	object-fit: cover;
 	width: 100%;
 }
 
 .info h3 {
-	font-size: 18rem;
+	font-size: 20rem;
 	font-weight: 700;
 	line-height: 1;
 	color: #fff;
@@ -1125,19 +1125,20 @@ header.open-menu .header_menu ul + .button{
 
 .equipment-stats strong {
 	display: block;
-	font-size: 8rem;
+	font-size: 10rem;
+	line-height: 1.2;
 	color: var(--yellow);
 }
 
 .equipment-stats span {
 	display: block;
 	color: #ccc;
-	font-size: 1.8rem;
+	font-size: 2rem;
 }
 
 .equipment-gallery img {
 	border-radius: 0.6rem;
-	height: 22rem;
+	height: 28rem;
 	width: 100%;
 	object-fit: cover;
 	transition: transform 0.3s ease;
