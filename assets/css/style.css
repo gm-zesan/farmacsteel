@@ -42,7 +42,8 @@
 :root{
 	--dark: #000000;
 	--yellow: #F08300;
-	--theme: #0072A9;
+	/* --theme: #0072A9; */
+	--theme: #0055A7;
 	scroll-behavior: inherit;
 }
 
@@ -121,13 +122,13 @@ h1{
 	font-size: 9rem;
 	font-weight: 700;
 	line-height: 1.13;
-	font-family: 'Graphik';
+	font-family: "Poppins", sans-serif;
 }
 h2, .h2{
 	font-size: 4.5rem;
 	font-weight: 700;
 	line-height: 1.04;
-	font-family: 'Graphik';
+	font-family: "Poppins", sans-serif;
 }
 h1 span, h2 span, h3 span, h4 span{
 	color: var(--theme);
@@ -136,22 +137,22 @@ h3{
 	font-size: 3.5rem;
 	font-weight: 700;
 	line-height: 1;
-	font-family: 'Graphik';
+	font-family: "Poppins", sans-serif;
 }
 h4, .h4{
 	font-size: 2.8rem;
 	font-weight: 700;
-	font-family: 'Graphik';
+	font-family: "Poppins", sans-serif;
 }
 h5, .h5{
 	font-size: 2.4rem;
 	font-weight: 600;
-	font-family: 'Graphik';
+	font-family: "Poppins", sans-serif;
 }
 h6, .h6{
 	font-size: 2rem;
 	font-weight: 600;
-	font-family: 'Graphik';
+	font-family: "Poppins", sans-serif;
 }
 .container{
 	padding: 0 1.5rem;
@@ -744,7 +745,7 @@ header.open-menu .header_menu ul + .button{
    width: 90rem;
    font-weight: 700;
    margin: 0 auto;
-   font-family: 'Graphik';
+   font-family: "Poppins", sans-serif;
    text-transform: uppercase;
 }
 .home_content h1 span{
@@ -1081,6 +1082,114 @@ header.open-menu .header_menu ul + .button{
 .timeline_item:last-child .timeline_content{
 	padding: 0;
 }
+
+
+/*equepment area*/
+.equipment_area .section-header {
+	background-color: var(--theme);
+	text-align: center;
+	padding: 4rem 0;
+}
+.equipment_area .section-header.win_win_header {
+	background-color: #fff;
+	text-align: center;
+	padding: 4rem 0;
+	margin-top: 5rem;
+}
+
+.section-header h2 {
+	color: #fff;
+	font-size: 4.5rem;
+	font-weight: 700;
+	margin-bottom: 0.5rem;
+}
+
+.section-header p {
+	color: #ddd;
+	font-size: 1.8rem;
+}
+.win_win_header.section-header h2 {
+	color: #000;
+	font-size: 4.5rem;
+	font-weight: 700;
+	margin-bottom: 0.5rem;
+}
+
+.win_win_header.section-header p {
+	color: #000;
+	font-size: 1.8rem;
+}
+
+.equipment-section {
+	padding: 8rem 0;
+	color: var(--text-light);
+}
+
+.equipment-section.dark {
+	background-color: var(--dark);
+}
+
+.equipment-section.dark .info{
+	margin-left: 5rem;
+}
+.equipment-section.theme .info{
+	margin-right: 5rem;
+}
+
+.equipment-section.theme {
+	background-color: var(--theme);
+}
+
+
+.equipment-section .image_number{
+	align-items: flex-end;
+}
+
+.equipment-section .image_number .image img{
+	height: 40rem;
+	object-fit: cover;
+	width: 100%;
+}
+
+.info h3 {
+	font-size: 18rem;
+	font-weight: 700;
+	line-height: 1;
+	color: #fff;
+	margin-bottom: 0.5rem;
+}
+
+.info h4 {
+	font-size: 3rem;
+	font-weight: 600;
+	color: #fff;
+}
+
+.equipment-stats strong {
+	display: block;
+	font-size: 8rem;
+	color: var(--yellow);
+}
+
+.equipment-stats span {
+	display: block;
+	color: #ccc;
+	font-size: 1.8rem;
+}
+
+.equipment-gallery img {
+	border-radius: 0.6rem;
+	height: 22rem;
+	width: 100%;
+	object-fit: cover;
+	transition: transform 0.3s ease;
+}
+
+.equipment-gallery img:hover {
+	transform: scale(1.05);
+}
+
+
 
 /*trust area*/
 .trust_area{
@@ -2070,7 +2179,9 @@ a.contact_icon:hover{
 
 /*win area*/
 .win_area{
-	padding-top: 8.7rem;
+	padding-top: 9rem;
+	padding-bottom: 9rem;
+	background-color: #0055A7;
 }
 .left_win{
 	background-color: #0054a7;
@@ -2098,7 +2209,8 @@ a.contact_icon:hover{
 .text_box{
 	padding: 5rem 3rem;
 	margin: 0 auto;
-	max-width: 85rem;
+	max-width: 80rem;
+	color: #fff;
 }
 .text_box p{
 	margin-top: 2rem;
@@ -2138,3 +2250,4 @@ a.contact_icon:hover{
 .vision_box{
 	max-width: 30rem;
 }
+
