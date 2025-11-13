@@ -162,77 +162,35 @@ h6, .h6{
 /* page loader  */
 #preloader {
 	position: fixed;
-	background: var(--dark);
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	z-index: 99999;
-	height: 100dvh;
-	width: 100vw;
-	display: -webkit-box;
-	display: -ms-flexbox;
+	inset: 0;
 	display: flex;
-	-webkit-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
-	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
-}
-.loader3 {
-	width: 8.0rem;
-	height: 8.0rem;
-	display: inline-block;
-	padding: .0rem;
-	text-align: left;
+	align-items: center;
+	justify-content: center;
+	background: var(--dark);
+	z-index: 99999;
+	transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
-.loader3 span {
-	position: absolute;
-	display: inline-block;
-	width: 8.0rem;
-	height: 8.0rem;
-	border-radius: 100%;
-	background: var(--theme);
-	-webkit-animation: loader3 1.5s linear infinite;
-	animation: loader3 1.5s linear infinite;
+#preloader.hidden {
+	opacity: 0;
+	visibility: hidden;
 }
 
-.loader3 span:last-child {
-	animation-delay: -0.9s;
-	-webkit-animation-delay: -0.9s;
+.preloader-spinner {
+	width: 84px;
+	height: 84px;
+	border-radius: 50%;
+	border: 10px solid rgba(255, 255, 255, 0.12);
+	border-top-color: var(--theme);
+	animation: preloader-spin 0.95s linear infinite;
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
-@keyframes loader3 {
-  	0% {
-    	-webkit-transform: scale(0, 0);
-    	        transform: scale(0, 0);
-    	opacity: 1;
-  	}
-  	100% {
-    	-webkit-transform: scale(1, 1);
-    	        transform: scale(1, 1);
-    	opacity: 0;
-  	}
+@keyframes preloader-spin {
+	to {
+		transform: rotate(360deg);
+	}
 }
-
-@-webkit-keyframes loader3 {
-  	0% {
-    	-webkit-transform: scale(0, 0);
-    	opacity: 0.8;
-  	}
-  	100% {
-    	-webkit-transform: scale(1, 1);
-    	opacity: 0;
-  	}
-}
-
-/* Preloader image styles */
-#preloader { position: fixed; inset: 0; background: #0b0b0b; display:flex; align-items:center; justify-content:center; z-index:99999; }
-#preloader .preloader_img{ max-width:220px; width:22vw; height:auto; display:block }
-#preloader .loader3{ display:none; }
-@media (max-width:480px){ #preloader .preloader_img{ max-width:120px; width:30vw } }
 
 
 /*Hamburger-menu START CSS*/
